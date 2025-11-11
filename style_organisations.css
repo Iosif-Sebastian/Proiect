@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "nav aside"
+        "footer footer";
+    grid-template-columns: 120px 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    min-height: 100vh;
+    background-color: #f6f8fb;
+    color:#333;
+}
+header {grid-area: header; background: #e74c3c; padding:1rem;}
+nav {grid-area: nav; background: #e6ecf2; padding: 1rem;}
+main {grid-area: main; background: #ffffff; padding: 1rem;}
+aside {grid-area:aside; background:#f1f4f8; padding: 1rem;}
+footer {grid-area: footer; background:e6ecf2; padding:1rem; text-align: center;}
+
+header {
+   grid-area: header;
+   color: white;
+   background: #e74c3c;
+   padding: 8px 16px;
+   text-align: center;
+   font-size: 14px;
+   font-weight: bold;
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    margin-bottom: 15px;
+}
+nav a {
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    color:#c0392b;
+}
+.Organisations{
+    text-align: center;
+    font-size: 18px;
+    color:#555;
+    margin-bottom: 15px;
+
+}
+.Searchbar{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px;
+    gap:10px;
+}
+.Searchbar input[type="text"]{
+    width: 50%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1.5px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+.Searchbar input[type="text"]:focus{
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 8px rgba(231, 76, 60,0.3);
+}
+
+.Searchbar button{
+      background-color: #e74c3c;
+    color: white;
+    border: 5px;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+.Searchbar button:hover{
+    background-color: #c0392b;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0,1);
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+footer{
+    background-color: #c0392b;
+}
+footer p{
+    color:white;
+}
+.back-to-top{
+    border-radius: 15px;
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    background: #c0392b;
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 5);
+    text-shadow: #333;
+    transition: 0.3s;
+}
+.back-to-top:hover{
+    background: #c0392b;
+    padding: 25px;
+}
+@media (max-width: 900px){
+    body{
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    nav{
+        text-align: center;
+        border-right: none;
+        border-bottom: 2px solid #eee;
+    }
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80%;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .Searchbar input[type="text"]{
+        width: 80%;
+    }
+}

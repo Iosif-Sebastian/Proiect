@@ -1,30 +1,225 @@
-body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #dceeff;
-}
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: white;
-    padding: 10px 30px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* RESET + SETĂRI DE BAZĂ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
-.logo img{
-    height: 50px;
+body {
+  background-color: #f6f8fb;
+  color: #333;
 }
 
-.search-bar input{
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    width: 220px;
-    outline:none;
-    transition: 0.3s;
+/* HEADER / MENIU */
+header.meniu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e74c3c;
+  padding: 15px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.search-bar input:focus{
-    border-color:#007bff;
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffe6e6;
+}
+
+/* BUTON LOGIN */
+.login-btn {
+  background-color: white;
+  color: #e74c3c;
+  border: 2px solid white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #ffe6e6;
+  color: #c0392b;
+}
+
+/* MODAL LOGIN */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background: white;
+  margin: 8% auto;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #e74c3c;
+}
+
+.modal-content h2 {
+  text-align: center;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.modal-content label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background-color: #c0392b;
+}
+
+/* SEARCH BAR */
+.searchbar {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 30px 0;
+}
+
+.searchbar input {
+  width: 50%;
+  max-width: 500px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1.5px solid #ccc;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.searchbar input:focus {
+  border-color: #e74c3c;
+  outline: none;
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.3);
+}
+
+/* CARDURI DE DONAȚII */
+.donations-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px;
+}
+
+.donation-card {
+  background-color: white;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+}
+
+.donations-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.donation-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.donation-subscription {
+  font-size: 14px;
+  color: #777;
+  margin: 8px 0;
+}
+
+.donation-amount {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.donate-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.donate-btn:hover {
+  background-color: #c0392b;
 }

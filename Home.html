@@ -1,24 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Donatii.ro</title>
-    </head>
-    <body bgcolor="#fff8dc">
-        <h1><center>ONG-uri Romania</center></h1>
-        <div>
-            <ul>
-                <li><a href="#despre">Despre</a></li>
-                <li><a href="#organizatii">Organizatii</a></li>
-                <li><a href="evenimente">Evenimente</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="D:\Facultate\TWProiect\Autentificare.txt">Autentificare</a></li>    
-            </ul>
-        </div>
-        <main>
-            <h2>Bine ai venit</h2>
-            <p>Aici poti descoperi cauze pentru donatii si evenimente caritabile in Romania</p>
-        </main>
-       
-    </body>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Donatii.ro / Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="meniu">
+    <img src="D:\Facultate\TW\TWProiect\Screenshot 2025-10-26 170459.png" alt="Logo" class="logo">
+    
+    <nav class="nav-links">
+      <a href="About.html">Despre</a>
+      <a href="Organisations.html">Organizații</a>
+      <a href="Events.html">Evenimente</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    
+    <button onclick="document.getElementById('loginModal').style.display='block'" class="login-btn">
+      Autentifică-te
+    </button>
+  </header>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span onclick="document.getElementById('loginModal').style.display='none'" class="close">&times;</span>
+      <h2>Conectează-te la contul tău</h2>
+      <form>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <label for="password">Parola</label>
+        <input type="password" id="password" name="password"><br>
+        <button type="submit">Conectează-te</button>
+      </form>
+      <p>Nu ai cont? <a href="CreareCont.html">Creează unul acum</a></p>
+    </div>
+  </div>
+  <div class="searchbar">
+    <input type="text" placeholder="Caută donații...">
+  </div>
+
+  <section class="donations-container">
+    <div class="donation-card">
+      <img src="exemplu.jpg" alt="Cauză" class="donations-img">
+      <p class="donation-title">Ajută copiii din mediul rural</p>
+      <p class="donation-subscription">Sprijină educația copiilor defavorizați.</p>
+      <p class="donation-amount">Suma strânsă: 4500 RON</p>
+      <button class="donate-btn">Donează</button>
+    </div>
+    
+    <div class="donation-card">
+      <img src="exemplu2.jpg" alt="Cauză" class="donations-img">
+      <p class="donation-title">Ajutor pentru animale abandonate</p>
+      <p class="donation-subscription">Contribuie la salvarea și hrănirea animalelor.</p>
+      <p class="donation-amount">Suma strânsă: 8200 RON</p>
+      <button class="donate-btn">Donează</button>
+    </div>
+  </section>
+</body>
 </html>
