@@ -1,57 +1,192 @@
-.contact-page{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #dceeff;
-}
-.contact-page .contact-container{
-    background-color: white;
-    width: 60%;
-    margin: 50px auto;
-    padding: 30px 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.contact-page h1{
-    text-align: center;
-    color: #004080;
-    margin-bottom: 30px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-.contact-page label{
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-    color: 333;
+body{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "nav aside"
+        "footer footer";
+     grid-template-columns: 0px auto;
+     grid-template-rows: 20% 35% 35% 20%;
+    min-height: 100vh;
+    background-color: #f6f8fb;
+  color: #333;
 }
-.contact-page input[type="text"]:focus,
+header {grid-area: header; background: #fff; padding:1rem;}
+nav {grid-area: nav; background: #e6ecf2; padding: 1rem;}
+main {grid-area: main; background: #ffffff; padding: 1rem;}
+aside {grid-area:aside; background:#f1f4f8; padding: 1rem;}
+footer {grid-area: footer; background:#e6ecf2; padding:1rem; text-align: center;}
 
-.contact-page textarea:focus{
-    border-color: #007bff;
-    outline: none;
-}
 
-.contact-page input[type="radio"]{
-    margin-right: 6px;
-}
-
-.contact-page input[type="submit"]{
-    background-color: #007bff;
+header{
+    grid-area: header;
+    background:  #e74c3c;
     color:white;
-    border:none;
-    padding: 10px 20px;
-    margin-top: 20px;
-    border-radius: 20px;
-    cursor: pointer;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
     font-weight: bold;
-    transition:background-color 0.3s;
 }
-.contact-page a{
-    display: block;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    margin-bottom: 15px;
+}
+
+nav a {
+    display: block;     /* OBLIGATORIU pentru nav vertical */
+    text-decoration: none;
+    color:#e74c3c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+main{
+    position: relative;
+     top:-150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    grid-area: main;
+   border-style: solid;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 40px auto;
+    margin-top: 20px;
+    width: 30%;
+}
+
+main form.contact-form{
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+form.contact-form label{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 10px;
+    color:#e74c3c;
+    font-weight: bold;
+}
+form.contact-form input{
+    display: flex;
+    margin-top: 2px;
+    outline: none;
+    border-color: #c3092b;
+    border-radius: 2px;
+    margin-bottom: 15px;
+    box-shadow: 0 0  4px rgba(195, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+main p{
     text-align: center;
     margin-top: 20px;
-    text-decoration: none;
-    color:#007bff;
+}
+
+
+main .radio-group label{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin-left: 10px;
+    gap: 5px;
+}
+main label[for="mesaj"]{
+    position: relative;
+    top: -10px;
+      color:#e74c3c;
     font-weight: bold;
 }
-.contact-page a:hover{
-    color:#005fcc;
+main textarea[for="mesaj"]{
+    border:solid #333;
+    border-radius: 10px;
+    color: #c3092b;
+    width: 60% auto;
+    overflow: auto;
+    width: 200px;
+    height: 50px;
+}
+.info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: -100px;
+    padding: 20px;
+     border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.8);
+}
+.info p:first-child{
+    margin-bottom: 30px;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 24px;
+}
+.info p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6px 0;
+  font-size: 15px;
+  color: #444;
+}
+footer{
+    margin-top: 100px;
+    grid-area: footer;
+    background: #e74c3c;
+    color:white;
+    text-align: center;
+    padding:20px;
+}
+
+nav ul{
+    list-style: none;
+}
+nav li{
+    margin-bottom: 15px;
+}
+nav a {
+    text-decoration: none;
+    color:#e74c3c;
+    font-weight: bold;
+    transition: 0.3s;
+}
+nav a:hover,
+nav a.active{
+    color:#c3092b;
+}
+.back-to-top{
+    border-radius: 15px;
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    background: #c0392b;
+    color: black;
+    padding: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 5);
+    text-shadow: #333;
+    transition: 0.3s;
+}
+.back-to-top:hover{
+    background: #c0392b;
+    padding: 25px;
 }

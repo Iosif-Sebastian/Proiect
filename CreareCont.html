@@ -1,57 +1,48 @@
 <!DOCTYPE html>
-<html lang="ro">
-<head>
-    <meta charset="UTF-8">
-    <title>Creare cont</title>
-    <link rel="stylesheet" href="style_crearecont.css">
-</head>
-<body class="creare-cont-page">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CreareCont</title>
+        <link rel="stylesheet" href="style_crearecont.css">
+    </head>
+    <body>
+        <a id="Top"></a>
+        <header>Inregistreaza-te</header>
+        <nav class="links">
+                <a href="Home.html">Acasa</a>
+                <a href="Organisations.html">Organizatii</a>
+                <a href="Events.html">Evenimente</a>
+                <a href="Contact.html">Contact</a>
+        </nav>
+        <main>
+            <form id="signup">
+                <label for="nume">Nume</label>
+                <input type="text" id="nume" name="nume" placeholder="Numele tau">
+                
+                <label for="prenume">Prenume</label>
+                <input type="text" id="prenume" name="prenume" placeholder="Prenumele tau">
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Emailul tau">
+                
+                <label for="password">Parola</label>
+                <input type="password" id="password" name="password" placeholder="Parola ta">
+                
+                <label for="confirmapassword">Confirma parola</label>
+                <input type="password" id="confirmapassword" name="confirmapassword" placeholder="Confirma parola">
+                
+                <label for="termeni">Sunt de acord cu termenii si conditiile</label>
+                <input type="checkbox" required>
+                
 
-    <div class="inregistrare-container">
-        <h1>Înregistrare</h1>
-        <p>Crează-ți un cont!</p>
-        <p>Ce fel de cont vrei să creezi:</p>
-        <form>
-            <label><input type="radio" id="administrator" name="rol" value="Administrator"> Administrator</label><br>
-            <label><input type="radio" id="donator" name="rol" value="Donator"> Donator</label><br>
-        </form>
-        <div id="logicModal" class="modal">
-            <div class="modal-content">
-                <div class="login-content">
-                    <span onclick="document.getElementById('logicModal').style.display='none'" class="close">&times;</span>
-                    <p>Introduceți parola de administrator:</p>
-                    <form id="adminForm">
-                        <label for="adminPassword">Parola:</label>
-                        <input type="password" id="adminPassword" name="adminPassword"><br><br>
-                        <button type="submit">Trimite</button>
-                    </form>
-                </div>
-            </div>
-        </div> 
-        <form>
-            <label for="nume">Nume:</label>
-            <input type="text" id="nume" name="nume"><br>
+                <button type="submit">Creeaza cont</button>
 
-            <label for="prenume">Prenume:</label>
-            <input type="text" id="prenume" name="prenume"><br>
-
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email"><br>
-
-            <label for="parola">Parola:</label>
-            <input type="password" id="parola" name="parola"><br>
-
-            <label for="confirma_parola">Confirmă parola:</label>
-            <input type="password" id="confirma_parola" name="confirma_parola"><br>
-
-            <input type="checkbox" id="terms" name="terms">
-            <label for="terms">Sunt de acord cu termenii și condițiile</label><br><br>
-
-            <button type="submit">Creează cont</button>
-        </form>
-
-        <a href="Home.html">← Înapoi la pagina principală</a>
-    </div>
-
-</body>
+                
+                
+            </form>
+            <a href="#top" class="back-to-top">⬆️ Mergi sus</a>
+        </main>
+        
+        <footer>>© 2025 Search For a Cause — Toate drepturile rezervate</footer>
+    </body>
 </html>

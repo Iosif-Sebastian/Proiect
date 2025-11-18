@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style_contact.css">
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style_contact.css">
 </head>
-<body class="contact-page">
+<body>
+    <a id="Top"></a>
+    <div class="site-grid">
+      <header>
+        <p>Contacteaza-ne</p>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="Home.html">Acasa</a></li>
+          <li><a href="About.html">Despre</a></li>
+          <li><a href="Organisations.html">Organizatii</a></li>
+          <li><a href="Events.html">Evenimente</a></li>
+           <button onclick="document.getElementById('loginModal').style.display='block'" class="login-btn">
+            <p> Autentifică-te</p>
+            <a href="CreareCont.html">Creează unul acum</a>
+           </button>
+        </ul>
+      </nav>
+      <main>
+        <form class="contact-form" action="#" method="post" novalidate>
+          <label for="nume">Nume</label>
+          <input type="text" id="nume" name="nume" placeholder="Numele tau" required>
 
-    <div class="contact-container">
-        <h1>Contact</h1>
+          <label for="prenume">Prenume</label>
+          <input type="text" id="prenume" name="prenume" placeholder="Prenumele tau" required>
 
-        <form>
-            <label for="name">Nume</label>
-            <input type="text" id="name" name="name">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
 
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email">
+          <label for="password">Parola</label>
+          <input type="password" id="password" name="password" placeholder="yourpassword">
 
-            <p>Alege subiectul întrebării tale:</p>
-            <label><input type="radio" name="subiect" value="Generala"> Întrebare generală</label>
-            <label><input type="radio" name="subiect" value="Tehnica"> Probleme tehnice</label>
-            <label><input type="radio" name="subiect" value="Donatii"> Donații</label>
+          <label for="confirm_password">Confirma parola</label>
+          <input type="password" id="confirm_password" name="confirm_password" placeholder="yourpassword">
+          
+          <p>Alege subiectul intrebarii tale</p>
 
-            <label for="Mesaj">Mesaj</label>
-            <textarea id="Mesaj" name="Mesaj" rows="6" placeholder="Scrie mesajul tău aici..."></textarea>
-
-            <input type="submit" value="Trimite">
+          
         </form>
+        <div class="radio-group">
+             <label><input type="radio" name="subiect" value="general" checked>Intrebare generala</label><br>
+             <label><input type="radio" name="subiect" value="tehnic">Probleme tehnice </label><br>
+        </div>
 
-        <a href="Home.html">← Înapoi la pagina principală</a>
+          <label for="mesaj">Mesaj</label>
+           <textarea id="mesaj" name="mesaj" row="5" placeholder="Scrie mesajul tau..." required></textarea>
+           <input type="submit" value="Trimite mesajul">
+      </main>
+      <aside class="info">
+        <p>Informatii utile</p>
+        <p><span>Email:</strong>contact@searchforacause.ro</span></p>
+        <p><span>Telefon:</strong>+40 123 456 789</span></p>
+        <p><span>Program:</strong>Luni-Vineri, 9:00-17:00</span></p>
+      </aside>
+       <a href="#top" class="back-to-top">⬆️ Mergi sus</a>
+      <footer>
+        <p>>© 2025 Search For a Cause — Toate drepturile rezervate</p>
+      </footer>
     </div>
-
+   
 </body>
 </html>

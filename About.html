@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="style_about.css">
+    </head>
+    <body bgcolor="#dceeff">
+      <header>
+        <h1><center>Despre noi</center></h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="D:\Facultate\TW\TWProiect\Home.html">Acasa</a></li>
+          <li><a href="D:\Facultate\TW\TWProiect\About.html">Despre</a></li>
+          <li><a href="D:\Facultate\TW\TWProiect\Organisations.html">Organizatii</a></li>
+          <li><a href="D:\Facultate\TW\TWProiect\Events.html">Evenimente</a></li>
+           <li>
+          <button onclick="document.getElementById('loginModal').style.display='block'" class="login-btn">
+            <p>Autentifică-te</p>
+          </button>
+        </ul>
+        <div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span onclick="document.getElementById('loginModal').style.display='none'" class="close">&times;</span>
+    <h2>Conectează-te la contul tău</h2>
+    <form>
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email">
+      <label for="password">Parola</label>
+      <input type="password" id="password" name="password"><br>
+      <button type="submit">Conectează-te</button>
+    </form>
+    <p>Nu ai cont? <a href="CreareCont.html">Creează unul acum</a></p>
+  </div>
+</div>
+      </nav>
+      <main> 
+        <div class="descriere">
+            <p>SearchForaCause este o platforma creata pentru a-i ajuta pe oamenii de bine sa descopere              si sa sustina cauzele in care cred.</p>
+            <p>Ne dorim sa ne conectam donatorii, voluntarii si organizatiile non-profit intr-un spatiu comun, unde fiecare contributie conteaza.</p>
+        </div>
+        <div class="video-section">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/zcruIov45bI"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+        </iframe>
+      </div>
+      </main>
+        <footer>
+        <p>>© 2025 Search For a Cause — Toate drepturile rezervate</p>
+      </footer>
+      
+    </body>
+
+</html>
